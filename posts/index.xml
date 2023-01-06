@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://43.154.34.129:37450/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Jan 2023 00:12:58 +0800</lastBuildDate><atom:link href="http://43.154.34.129:37450/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>http://43.154.34.129:37450/posts/my-first-post/</link>
+      <pubDate>Sat, 07 Jan 2023 00:12:58 +0800</pubDate>
+      
+      <guid>http://43.154.34.129:37450/posts/my-first-post/</guid>
+      <description>This is bold text, and this is emphasized text.
+Visit the Hugo website!</description>
+    </item>
+    
+  </channel>
+</rss>
