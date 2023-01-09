@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/sql-join/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/sql-join/</guid>
+      <description>clickhouse
+常用操作
+join # 所有的join 操作基本范式都是
+​	table1 join table2 on table.xxx=table2.xxx
+​	join table3 on table1.xxx=table3.xxx
+​	join table4 on table2.xxx=table4.xxx
+不允许先查询 再进行join,错误查询示例
+select * from table_a where age=12 (inner) join table_b on table_a.id =table_b.id left joni table_c on table a.id=table_c.id where table_a.name=&amp;#39;xxxx&amp;#34; (innser)join操作 ​	内连接,去两个表on 交集
+select * from table_a (inner) join table_b on table_a.id =table_b.id where table_a.name=&amp;#39;&amp;#39;xxxx&amp;#34; ​
+Left join
+左边为空时,会导致不会查到任何数据
+左连接,取左表所有
+select * from table_a left join table_b on table_a.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2%E8%B0%83%E4%BC%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2%E8%B0%83%E4%BC%98/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
