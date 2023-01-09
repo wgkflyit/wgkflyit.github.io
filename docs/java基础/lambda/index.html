@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TODO">
+<meta name="description" content=" Optional # Optional用法:
+无法判断被调用传递过来的list 是否为空, 可以省略if null的判断条件
+List&lt;String&gt; carsFiltered = Optional.ofNullable(cars) .orElseGet(Collections::emptyList) .stream() .filter(Objects::nonNull) //filtering car object that are null .map(Car::getName) //now it&#39;s a stream of Strings .filter(Objects::nonNull) //filtering null in Strings .filter(name -&gt; name.startsWith(&#34;M&#34;)) .collect(Collectors.toList()); //back to List of Strings ">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="TODO" />
+<meta property="og:description" content=" Optional # Optional用法:
+无法判断被调用传递过来的list 是否为空, 可以省略if null的判断条件
+List&lt;String&gt; carsFiltered = Optional.ofNullable(cars) .orElseGet(Collections::emptyList) .stream() .filter(Objects::nonNull) //filtering car object that are null .map(Car::getName) //now it&#39;s a stream of Strings .filter(Objects::nonNull) //filtering null in Strings .filter(name -&gt; name.startsWith(&#34;M&#34;)) .collect(Collectors.toList()); //back to List of Strings " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/docs/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="http://example.org/docs/java%E5%9F%BA%E7%A1%80/lambda/" /><meta property="article:section" content="docs" />
 
 
-<title>回溯 | My New Hugo Site</title>
+<title>Lambda | My New Hugo Site</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
@@ -138,7 +142,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/java%E5%9F%BA%E7%A1%80/lambda/" class="">Lambda</a>
+    <a href="/docs/java%E5%9F%BA%E7%A1%80/lambda/" class="active">Lambda</a>
   
 
         </li>
@@ -404,7 +408,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF/" class="active">回溯</a>
+    <a href="/docs/%E7%AE%97%E6%B3%95/%E5%9B%9E%E6%BA%AF/" class="">回溯</a>
   
 
         </li>
@@ -497,7 +501,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>回溯</strong>
+  <strong>Lambda</strong>
 
   <label for="toc-control">
     
@@ -511,7 +515,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#optional">Optional</a></li>
+  </ul>
+</nav>
 
 
 
@@ -522,7 +530,25 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><p>TODO</p>
+  <article class="markdown"><h2 id="optional">
+  Optional
+  <a class="anchor" href="#optional">#</a>
+</h2>
+<p>Optional用法:</p>
+<ul>
+<li>
+<p>无法判断被调用传递过来的list 是否为空, 可以省略if null的判断条件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> carsFiltered <span style="color:#f92672">=</span> Optional<span style="color:#f92672">.</span><span style="color:#a6e22e">ofNullable</span><span style="color:#f92672">(</span>cars<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">orElseGet</span><span style="color:#f92672">(</span>Collections<span style="color:#f92672">::</span>emptyList<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>Objects<span style="color:#f92672">::</span>nonNull<span style="color:#f92672">)</span> <span style="color:#75715e">//filtering car object that are null
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>Car<span style="color:#f92672">::</span>getName<span style="color:#f92672">)</span> <span style="color:#75715e">//now it&#39;s a stream of Strings
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>Objects<span style="color:#f92672">::</span>nonNull<span style="color:#f92672">)</span> <span style="color:#75715e">//filtering null in Strings
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span>name <span style="color:#f92672">-&gt;</span> name<span style="color:#f92672">.</span><span style="color:#a6e22e">startsWith</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;M&#34;</span><span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">.</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span> <span style="color:#75715e">//back to List of Strings
+</span></span></span></code></pre></div></li>
+<li></li>
+</ul>
 </article>
  
       
@@ -562,7 +588,11 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#optional">Optional</a></li>
+  </ul>
+</nav>
 
 
  

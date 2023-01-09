@@ -8,10 +8,10 @@
     <language>en</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://example.org/docs/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/gmp/</link>
+      <link>http://example.org/docs/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/gmp%E6%A8%A1%E5%9E%8B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/gmp/</guid>
+      <guid>http://example.org/docs/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/gmp%E6%A8%A1%E5%9E%8B/</guid>
       <description>G的大小: 2-4k
 线程的大小 M?
 1、我们通过 go func () 来创建一个 goroutine；
@@ -23,11 +23,32 @@
     
     <item>
       <title></title>
+      <link>http://example.org/docs/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%8F%8D%E5%B0%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/%E5%8F%8D%E5%B0%84/</guid>
+      <description>1 反射使用 # 1.1 反射获取数据类型 # 通过relfect.TypeOf() 获取对应的类型,这个方法可以返回类型元数据信息,
+Name方法返回类型对应的名字,如果是slice类型或者是指针类型,返回为空字符串 Kind方法对应的数据类型,int、string、struct、func,枚举值reflect.Kind类型 Size: 数据占用内存大小,单位字节 &amp;hellip; type Type interface { ... Name() string // 返回类型对应的名字 PkgPath() string // 类型所在路径 Kind() Kind // 类型元数据的所属类型,int32、float32、string、slice、map、struct、ptr... Elem() Type // 数组、切片、chan、map、指针类型存储的数据信息,其他类型会panic Field(i int) StructField // 返回sturct的某个字段元数据信息 ... } type Foo struct { Name string `tag1:&amp;#34;First Tag&amp;#34; tag2:&amp;#34;Second Tag&amp;#34;` Age int `json:&amp;#34;age&amp;#34;` } func main() { testCase := []interface{}{ 1, &amp;#34;1&amp;#34;, []string{&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;}, map[int]int{1: 1, 2: 2}, Foo{ Name: &amp;#34;foo&amp;#34;, Age: 12, }, ioutil.</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://example.org/docs/java%E5%9F%BA%E7%A1%80/jvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://example.org/docs/java%E5%9F%BA%E7%A1%80/jvm/</guid>
       <description>TODO</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/docs/java%E5%9F%BA%E7%A1%80/lambda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/java%E5%9F%BA%E7%A1%80/lambda/</guid>
+      <description> Optional # Optional用法:
+无法判断被调用传递过来的list 是否为空, 可以省略if null的判断条件
+List&amp;lt;String&amp;gt; carsFiltered = Optional.ofNullable(cars) .orElseGet(Collections::emptyList) .stream() .filter(Objects::nonNull) //filtering car object that are null .map(Car::getName) //now it&amp;#39;s a stream of Strings .filter(Objects::nonNull) //filtering null in Strings .filter(name -&amp;gt; name.startsWith(&amp;#34;M&amp;#34;)) .collect(Collectors.toList()); //back to List of Strings </description>
     </item>
     
     <item>
@@ -61,10 +82,9 @@ join # 所有的join 操作基本范式都是
 ​	join table3 on table1.xxx=table3.xxx
 ​	join table4 on table2.xxx=table4.xxx
 不允许先查询 再进行join,错误查询示例
-select * from table_a where age=12 (inner) join table_b on table_a.id =table_b.id left joni table_c on table a.id=table_c.id where table_a.name=&amp;#39;xxxx&amp;#34; (innser)join操作 ​	内连接,去两个表on 交集
+select * from table_a where age=12 (inner) join table_b on table_a.id =table_b.id left joni table_c on table a.id=table_c.id where table_a.name=&amp;#39;xxxx&amp;#34; (innser)join操作 # ​	内连接,去两个表on 交集
 select * from table_a (inner) join table_b on table_a.id =table_b.id where table_a.name=&amp;#39;&amp;#39;xxxx&amp;#34; ​
-Left join
-左边为空时,会导致不会查到任何数据
+Left join # 左边为空时,会导致不会查到任何数据
 左连接,取左表所有
 select * from table_a left join table_b on table_a.</description>
     </item>
@@ -76,6 +96,28 @@ select * from table_a left join table_b on table_a.</description>
       
       <guid>http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2%E8%B0%83%E4%BC%98/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/%E7%89%A9%E5%8C%96%E8%A7%86%E5%9B%BE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/%E7%89%A9%E5%8C%96%E8%A7%86%E5%9B%BE/</guid>
+      <description>物化视图相关功能</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/%E8%BF%90%E7%BB%B4%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhosue/%E8%BF%90%E7%BB%B4%E7%9B%B8%E5%85%B3/</guid>
+      <description>system.clusters表 # 作用: 查询系统的集群信息
+system.query_log # 系统日志:
+system.parts # 系统表:根据此表可以查询表的分区信息,以及占用的空间大小
+SELECT TABLE, -- 表名 DATABASE, -- 数据库名 max(partition) AS part, -- 最大分区 formatReadableSize(sum(bytes_on_disk)) AS SIZE, -- 磁盘容量 sum(bytes_on_disk) AS size_bytes -- 磁盘容量 FROM system.parts_all GROUP BY TABLE, DATABASE ORDER BY size_bytes DESC system.disks # 查询磁盘使用率
+SELECT sum(total_space -free_space)/sum(total_space) AS USAGE, -- 使用率 count(*) , -- 节点数量 formatReadableSize(sum(total_space -free_space)) AS foramat_usage, -- 使用空间大小 formatReadableSize(sum(total_space)) AS format_total --总空间大小 FROM clusterAllReplicas(&amp;#39;clickhouse_pcg_video_data_science_2_replica&amp;#39;,system,disks); 数据导出命令 # mysql -h9.</description>
     </item>
     
     <item>
